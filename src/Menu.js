@@ -8,9 +8,14 @@ import Contador from './componentes/Contador'
 import Plataformas from './componentes/Plataformas'
 import ValidarProps from './componentes/ValidarProps'
 import Evento from './componentes/Evento'
-import Avo from './componentes/ComunicaçãoDireta'
+import Avo from './componentes/ComunicacaoDireta'
+import TextoSinconizado from './componentes/ComunicacaoIndireta'
 
 export default createDrawerNavigator({
+    TextoSincronizado: {
+        screen: () => <TextoSinconizado />,
+        navigationOptions: { title: 'ComunicaçãoIndireta' }
+    },
     Avo: {
         screen: () => <Avo nome='João' sobrenome='Silva'/>,
         navigationOptions: { title: 'ComunicaçãoDireta' }
